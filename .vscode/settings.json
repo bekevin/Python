@@ -1,7 +1,0 @@
-{
-    "editor.tabCompletion": "onlySnippets",
-    "editor.suggest.localityBonus": true,
-    "python.linting.flake8Enabled": true,
-    "python.linting.enabled": false,
-    "python.linting.pylintEnabled": false
-}
