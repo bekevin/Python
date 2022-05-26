@@ -1,0 +1,30 @@
+#Dynamic Routing
+@app.route("/<my_name>")
+def greatings(my_name):
+    """View function to greet the user by name."""
+    return "Welcome "+ my_name +"!"
+
+# Converter
+string
+int
+float
+path
+uuid.
+
+@app.route('/square/<int:number>')
+def show_square(number):
+    """View that shows the square of the number passed by URL"""
+    return "Square of "+ str(number) +" is: "+ str(number * number) 
+
+# URL for static files
+url_for('static', filename = 'name_of_file')
+
+# Delimiters
+Before we get started, let’s explore some delimiters used in Jinja Syntax.
+
+    {% ... %} is used for statements.
+    {{ ... }} is used for variables.
+    {# ... #} is used for comments.
+    # ... ## is used for line statements.
+
+# loops

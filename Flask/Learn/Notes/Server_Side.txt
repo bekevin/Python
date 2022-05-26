@@ -1,0 +1,8 @@
+# Rendering templates
+
+Inside python file:
+return render_template("index.html", my_object = Object)
+
+Inside Client files:
+{{ my_object }}
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add React in One Minute</title>
+  </head>
+  <body>
+
+    <h2>Add React in One Minute</h2>
+    <p>This page demonstrates using React with no build tooling.</p>
+    <p>React is loaded as a script tag.</p>
+    <h3>FOR</h3>
+    <table style="width:100%; text-align:center">
+      <tr>
+           <th>Index</th>
+          <th>Username</th>
+          <th>Location</th>
+      </tr>
+      {% for username, location in users.items() %}
+      <tr>
+          <td>{{loop.index}}</td>
+          <td>{{username}}</td>
+          <td>{{location}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <h3>IF</h3>
+    <table style="width:100%; text-align:center">
+      <tr>
+          <th>Username</th>
+          <th>Location</th>
+      </tr>
+      {% set testing = 1 %}
+      {% for username, location in users.items() %}
+      {% if location == "Los Angeles" %}
+      <tr>
+          <th>{{variable}}</th>
+          <td>{{username}}</td>
+          <td>{{location}}</td>
+      </tr>
+      {{variable++}}
+      {% endif %}
+      {% endfor %}
+    </table>
+    <h3>VIDEO</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5TMLa14s70s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    <!-- We will put our React component inside this div. -->
+    <h3>REACT</h3>
+    <div id="like_button_container"></div>
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load our React component. -->
+    <script src="{{url_for('static', filename='like_button.js')}}"></script>
+
+  </body>
+</html>
